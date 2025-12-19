@@ -10,18 +10,17 @@ const closeBtn = document.getElementById("closeBtn");
 let users = [];
 let ascending = true;
 
-// Show loading message
 container.innerHTML = '<p style="text-align: center; color: #fff; font-size: 18px; margin-top: 50px;">Loading users...</p>';
 
 fetch(API_URL)
   .then(res => res.json())
   .then(data => {
-    console.log("Users fetched:", data); // Debug log
+    console.log("Users fetched:", data); 
     users = data;
     renderUsers(users);
   })
   .catch((error) => {
-    console.error("Error fetching users:", error); // Debug log
+    console.error("Error fetching users:", error);
     container.innerHTML = '<p style="text-align: center; color: #e74c3c; font-size: 18px; background: white; padding: 20px; border-radius: 12px; margin: 50px auto; max-width: 500px;">Unable to fetch users. Please check your internet connection.</p>';
   });
 
@@ -33,8 +32,6 @@ function renderUsers(data) {
     card.innerHTML = `
       <h3>${user.name}</h3>
       <p>📧 ${user.email}</p>
-      <p>🏢 ${user.company.name}</p>
-      <p>📍 ${user.address.city}</p>
     `;
     card.onclick = () => showDetails(user);
     container.appendChild(card);
