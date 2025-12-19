@@ -429,15 +429,11 @@ button:active {
   top: 25px;
   font-size: 32px;
   cursor: pointer;
-  color: #95a5a6;
   width: 48px;
   height: 48px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 12px;
   background: rgba(0, 0, 0, 0.05);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 300;
   line-height: 1;
 }
@@ -445,18 +441,16 @@ button:active {
 #closeBtn:hover {
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
-  transform: rotate(90deg) scale(1.1);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  
 }
 
-/* Interactive Enhancements */
+
 button:focus,
 input:focus {
   outline: 3px solid rgba(102, 126, 234, 0.5);
   outline-offset: 3px;
 }
 
-/* Staggered animation for cards */
 .cards-container > .card:nth-child(1) { animation-delay: 0.1s; }
 .cards-container > .card:nth-child(2) { animation-delay: 0.2s; }
 .cards-container > .card:nth-child(3) { animation-delay: 0.3s; }
@@ -468,7 +462,7 @@ input:focus {
 .cards-container > .card:nth-child(9) { animation-delay: 0.9s; }
 .cards-container > .card:nth-child(10) { animation-delay: 1s; }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   body {
     padding: 20px 15px;
