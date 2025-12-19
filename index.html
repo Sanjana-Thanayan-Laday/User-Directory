@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>👥 User Management</h1>
+    <p style="color: #5a6c7d; font-size: 1.1rem; margin-top: 10px; font-weight: 500;">Discover and Connect with Team Members</p>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="🔍 Search by name or email...">
+    <button id="sortBtn">Sort A–Z</button>
+  </div>
+
+  <div id="usersContainer" class="cards-container"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeBtn">&times;</span>
+      <div id="userDetails"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
